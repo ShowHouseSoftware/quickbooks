@@ -27,7 +27,7 @@ class Service extends Client
      *
      * @var bool
      */
-    protected $responseHasRoot = true;
+    protected static $responseHasRoot = true;
 
     /**
      * Load a single item.
@@ -53,7 +53,7 @@ class Service extends Client
         $response = parent::post($this->getResourceName(), $data);
 
         // Response has no root, send it back immediately.
-        if (!$this->responseHasRoot) {
+        if (!static::$responseHasRoot) {
             return $response;
         }
 
@@ -72,7 +72,7 @@ class Service extends Client
         $response = parent::post($this->getResourceName().'?operation=update', $data);
 
         // Response has no root, send it back immediately.
-        if (!$this->responseHasRoot) {
+        if (!static::$responseHasRoot) {
             return $response;
         }
 

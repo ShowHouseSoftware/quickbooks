@@ -16,5 +16,5 @@ class TaxService extends Service
      *
      * @var bool
      */
-    protected $responseHasRoot = false;
+    protected static $responseHasRoot = false;
 }
