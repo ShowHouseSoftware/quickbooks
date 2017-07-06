@@ -82,13 +82,14 @@ class Service extends Client
     /**
      * Delete an entity.
      *
-     * @param array $data Item information.
+     * @param string $id Item information.
+     * @param int $syncToken
      */
-    public function delete($data)
+    public function delete($id, $syncToken = 0)
     {
         return parent::post($this->getResourceName().'?operation=delete', [
-            'Id'        => $data,
-            'SyncToken' => 0,
+            'Id'        => $id,
+            'SyncToken' => $syncToken,
         ])->{$this->getEntityName()};
     }
 
