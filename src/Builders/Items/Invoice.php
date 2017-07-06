@@ -5,6 +5,30 @@ namespace ReneDeKat\Quickbooks\Builders\Items;
 class Invoice extends Item
 {
     /**
+     * @param string $amount
+     *
+     * @return $this
+     */
+    public function setAmount($amount)
+    {
+        $this->data['Amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * @param string $description
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->data['Description'] = $description;
+
+        return $this;
+    }
+
+    /**
      * Set Item's name. This is not needed if name is set through setItem().
      *
      * @param string $name Name of Item.
@@ -14,6 +38,19 @@ class Invoice extends Item
     public function setUnitPrice($name)
     {
         $this->data[$this->data['DetailType']]['UnitPrice'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Set Class Reference (from Products & Services) associated to this Item.
+     *
+     * @param string $id Item ID
+     *
+     * @return \ReneDeKat\Quickbooks\Builders\Items\Invoice
+     */
+    public function setClassRef($id) {
+        $this->data[$this->data['DetailType']]['ClassRef']['value'] = $id;
 
         return $this;
     }
