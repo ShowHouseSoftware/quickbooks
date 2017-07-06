@@ -131,6 +131,7 @@ abstract class Builder implements BuilderContract
 
     /**
      * @param $syncToken
+     *
      * @return $this
      */
     public function setSynctoken($syncToken)

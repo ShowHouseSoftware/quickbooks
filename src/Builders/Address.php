@@ -4,9 +4,9 @@ namespace ReneDeKat\Quickbooks\Builders;
 
 class Address extends Builder
 {
-
     /**
      * @param string $line1
+     *
      * @return Address
      */
     public function setLine1($line1)
@@ -18,6 +18,7 @@ class Address extends Builder
 
     /**
      * @param string $line2
+     *
      * @return Address
      */
     public function setLine2($line2)
@@ -29,6 +30,7 @@ class Address extends Builder
 
     /**
      * @param string $city
+     *
      * @return Address
      */
     public function setCity($city)
@@ -40,6 +42,7 @@ class Address extends Builder
 
     /**
      * @param string $postalCode
+     *
      * @return Address
      */
     public function setPostalCode($postalCode)
@@ -51,6 +54,7 @@ class Address extends Builder
 
     /**
      * @param string $country
+     *
      * @return Address
      */
     public function setCountry($country)
