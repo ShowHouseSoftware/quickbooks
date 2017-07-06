@@ -4,9 +4,9 @@ namespace ReneDeKat\Quickbooks\Builders;
 
 class Customer extends Builder
 {
-
     /**
      * @param $id
+     *
      * @return $this
      */
     public function setId($id)
@@ -36,6 +36,7 @@ class Customer extends Builder
 
     /**
      * @param string $displayName
+     *
      * @return $this
      */
     public function setDisplayName($displayName)
@@ -47,6 +48,7 @@ class Customer extends Builder
 
     /**
      * @param string $companyName
+     *
      * @return $this
      */
     public function setCompanyName($companyName)
