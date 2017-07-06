@@ -15,7 +15,7 @@ class QBClass extends Builder
 
         return $this;
     }
-    
+
     /**
      * @param string $name
      *
