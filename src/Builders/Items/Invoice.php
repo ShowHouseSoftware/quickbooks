@@ -49,7 +49,8 @@ class Invoice extends Item
      *
      * @return \ReneDeKat\Quickbooks\Builders\Items\Invoice
      */
-    public function setClassRef($id) {
+    public function setClassRef($id)
+    {
         $this->data[$this->data['DetailType']]['ClassRef']['value'] = $id;
 
         return $this;
