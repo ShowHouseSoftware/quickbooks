@@ -82,8 +82,8 @@ class Service extends Client
     /**
      * Delete an entity.
      *
-     * @param string $id Item information.
-     * @param int $syncToken
+     * @param string $id        Item information.
+     * @param int    $syncToken
      */
     public function delete($id, $syncToken = 0)
     {
