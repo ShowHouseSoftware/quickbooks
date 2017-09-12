@@ -44,4 +44,18 @@ class Invoice extends Service
             'Content-Type' => 'application/octet-stream',
         ]);
     }
+
+    /**
+     * Void an entity.
+     *
+     * @param string $id        Invoice ID.
+     * @param int    $syncToken
+     */
+    public function void($id, $syncToken = 0)
+    {
+        return parent::post($this->getResourceName().'?operation=void', [
+            'Id'        => $id,
+            'SyncToken' => $syncToken,
+        ])->{$this->getEntityName()};
+    }
 }
