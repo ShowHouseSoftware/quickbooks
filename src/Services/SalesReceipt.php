@@ -7,7 +7,7 @@ use ReneDeKat\Quickbooks\Services\Traits\Attachable;
 class SalesReceipt extends Service
 {
     use Attachable;
-    
+
     /**
      * Void an entity.
      *
