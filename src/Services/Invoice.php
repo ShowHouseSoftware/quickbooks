@@ -44,7 +44,7 @@ class Invoice extends Service
             'Content-Type' => 'application/octet-stream',
         ]);
     }
-    
+
     /**
      * Void an entity.
      *
