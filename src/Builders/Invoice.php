@@ -112,4 +112,32 @@ class Invoice extends Builder
 
         return $this;
     }
+
+    /**
+     * Set due date.
+     *
+     * @param string $dueDate YYYY-MM-DD
+     *
+     * @return $this
+     */
+    public function setDueDate($dueDate)
+    {
+        $this->data['DueDate'] = $dueDate;
+
+        return $this;
+    }
+
+    /**
+     * Set transaction date.
+     *
+     * @param string $txnDate YYYY-MM-DD
+     *
+     * @return $this
+     */
+    public function setTxnDate($txnDate)
+    {
+        $this->data['TxnDate'] =     $txnDate;
+
+        return $this;
+    }
 }
