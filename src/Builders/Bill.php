@@ -2,12 +2,11 @@
 
 namespace ReneDeKat\Quickbooks\Builders;
 
-use ReneDeKat\Quickbooks\Builders\Traits\HasCustomer;
 use ReneDeKat\Quickbooks\Builders\Traits\Itemizable;
 
 class Bill extends Builder
 {
-    use HasCustomer, Itemizable;
+    use Itemizable;
 
     /**
      * @param string $txnDate
@@ -31,6 +30,27 @@ class Bill extends Builder
     public function setDueDate($dueDate)
     {
         $this->data['DueDate'] = $dueDate;
+
+        return $this;
+    }
+
+    /**
+     * Set total amount.
+     *
+     * @param string $totalAmount 
+     *
+     * @return $this
+     */
+    public function setTotalAmount($totalAmount)
+    {
+        $this->data['TotalAmt'] = $totalAmount;
+
+        return $this;
+    }
+    
+    public function setVendorRef($vendorRef)
+    {
+        $this->data['VendorRef']['value'] = $vendorRef;
 
         return $this;
     }
