@@ -37,7 +37,7 @@ class Bill extends Builder
     /**
      * Set total amount.
      *
-     * @param string $totalAmount 
+     * @param string $totalAmount
      *
      * @return $this
      */
@@ -47,7 +47,7 @@ class Bill extends Builder
 
         return $this;
     }
-    
+
     public function setVendorRef($vendorRef)
     {
         $this->data['VendorRef']['value'] = $vendorRef;

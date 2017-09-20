@@ -45,10 +45,9 @@ class Bill extends Item
     public function setCustomerRef($id)
     {
         $this->data['ItemBasedExpenseLineDetail']['CustomerRef']['value'] = $id;
-    
+
         return $this;
     }
-
 
     public function setAccountRef($id)
     {
@@ -70,7 +69,7 @@ class Bill extends Item
 
         return $this;
     }
-    
+
     /**
      * Set this item to be taxable.
      *
@@ -90,4 +89,3 @@ class Bill extends Item
         return $this;
     }
 }
-
