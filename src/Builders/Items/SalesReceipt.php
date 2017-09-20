@@ -157,4 +157,3 @@ class SalesReceipt extends Item
         return $this;
     }
 }
-

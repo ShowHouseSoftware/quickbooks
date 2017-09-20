@@ -136,7 +136,7 @@ class Invoice extends Builder
      */
     public function setTxnDate($txnDate)
     {
-        $this->data['TxnDate'] =     $txnDate;
+        $this->data['TxnDate'] = $txnDate;
 
         return $this;
     }
