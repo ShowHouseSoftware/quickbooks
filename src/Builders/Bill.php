@@ -1,56 +1,103 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Builders;
+namespace ReneDeKat\Quickbooks\Builders\Items;
 
-use ReneDeKat\Quickbooks\Builders\Traits\Itemizable;
-
-class Bill extends Builder
+class Bill extends Item
 {
-    use Itemizable;
-
     /**
-     * @param string $txnDate
+     * @param string $description
      *
      * @return $this
      */
-    public function setTxnDate($txnDate)
+    public function setDescription($description)
     {
-        $this->data['TxnDate'] = $txnDate;
+        $this->data['Description'] = $description;
 
         return $this;
     }
 
     /**
-     * Set due date.
+     * Set Amount.
      *
-     * @param string $dueDate YYYY-MM-DD
+     * @param string $amount Amount.
      *
-     * @return $this
+     * @return \ReneDeKat\Quickbooks\Builders\Items\Bill
      */
-    public function setDueDate($dueDate)
+    public function setAmount($amount)
     {
-        $this->data['DueDate'] = $dueDate;
+        $this->data['Amount'] = $amount;
+
+        return $this;
+    }
+
+
+    /**
+     * Set this detail as AccountBasedExpenseLineDetail.
+     *
+     * @return \ReneDeKat\Quickbooks\Builders\Items\Bill
+     */
+    public function asAccountBasedExpenseLineDetail()
+    {
+        $this->data['DetailType'] = 'AccountBasedExpenseLineDetail';
 
         return $this;
     }
 
     /**
-     * Set total amount.
+     * Set this detail as ItemBasedExpenseLineDetail.
      *
-     * @param string $totalAmount
-     *
-     * @return $this
+     * @return \ReneDeKat\Quickbooks\Builders\Items\Bill
      */
-    public function setTotalAmount($totalAmount)
+    public function asItemBasedExpenseLineDetail()
     {
-        $this->data['TotalAmt'] = $totalAmount;
+        $this->data['DetailType'] = 'ItemBasedExpenseLineDetail';
 
         return $this;
     }
 
-    public function setVendorRef($vendorRef)
+    public function setCustomerRef($id)
     {
-        $this->data['VendorRef']['value'] = $vendorRef;
+        $this->data[$this->data['DetailType']]['CustomerRef']['value'] = $id;
+
+        return $this;
+    }
+
+    public function setAccountRef($id)
+    {
+        $this->data[$this->data['DetailType']]['AccountRef']['value'] = $id;
+
+        return $this;
+    }
+
+    public function setItemRef($id)
+    {
+        $this->data[$this->data['DetailType']]['ItemRef']['value'] = $id;
+
+        return $this;
+    }
+
+    public function setBillableStatus($billableStatus)
+    {
+        $this->data[$this->data['DetailType']]['BillableStatus'] = $billableStatus;
+
+        return $this;
+    }
+
+    /**
+     * Set this item to be taxable.
+     *
+     * @param bool  $taxable Set to TRUE to make it taxable or FALSE otherwise. TRUE by default.
+     * @param mixed $id      TaxCode ID.
+     *
+     * @return \ReneDeKat\Quickbooks\Builders\Items\Bill
+     */
+    public function isTaxable($taxable = true, $id = 'TAX')
+    {
+        if ($taxable) {
+            $this->data[$this->data['DetailType']]['TaxCodeRef']['value'] = $id;
+        } elseif (isset($this->data[$this->data['DetailType']]['TaxCodeRef'])) {
+            unset($this->data[$this->data['DetailType']]['TaxCodeRef']);
+        }
 
         return $this;
     }
