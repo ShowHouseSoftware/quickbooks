@@ -38,7 +38,7 @@ class Bill extends Item
      */
     public function asAccountBasedExpenseLineDetail()
     {
-        $this->setDetailType('AccountBasedExpenseLineDetail');
+        $this->data['DetailType'] = 'AccountBasedExpenseLineDetail';
 
         return $this;
     }
@@ -50,7 +50,7 @@ class Bill extends Item
      */
     public function asItemBasedExpenseLineDetail()
     {
-        $this->setDetailType('ItemBasedExpenseLineDetail');
+        $this->data['DetailType'] = 'ItemBasedExpenseLineDetail';
 
         return $this;
     }
