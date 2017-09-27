@@ -14,9 +14,9 @@ class Bill extends Service
      * @param string $id        Invoice ID.
      * @param int    $syncToken
      */
-    public function void($id, $syncToken = 0)
+    public function delete($id, $syncToken = 0)
     {
-        return parent::post($this->getResourceName().'?operation=void', [
+        return parent::post($this->getResourceName().'?operation=delete', [
             'Id'        => $id,
             'SyncToken' => $syncToken,
         ])->{$this->getEntityName()};
