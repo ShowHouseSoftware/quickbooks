@@ -30,7 +30,6 @@ class Bill extends Item
         return $this;
     }
 
-
     /**
      * Set this detail as AccountBasedExpenseLineDetail.
      *
