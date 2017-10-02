@@ -1,6 +1,6 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Builders\Items;
+namespace ShowHouseSoftware\Quickbooks\Builders\Items;
 
 class SalesReceipt extends Item
 {
@@ -33,7 +33,7 @@ class SalesReceipt extends Item
      *
      * @param string $name Name of Item.
      *
-     * @return \ReneDeKat\Quickbooks\Builders\Items\Invoice
+     * @return \ShowHouseSoftware\Quickbooks\Builders\Items\Invoice
      */
     public function setUnitPrice($name)
     {
@@ -47,7 +47,7 @@ class SalesReceipt extends Item
      *
      * @param string $id Item ID
      *
-     * @return \ReneDeKat\Quickbooks\Builders\Items\Invoice
+     * @return \ShowHouseSoftware\Quickbooks\Builders\Items\Invoice
      */
     public function setClassRef($id)
     {
@@ -61,7 +61,7 @@ class SalesReceipt extends Item
      *
      * @param string $id Item ID
      *
-     * @return \ReneDeKat\Quickbooks\Builders\Items\Invoice
+     * @return \ShowHouseSoftware\Quickbooks\Builders\Items\Invoice
      */
     public function setItemRef($id)
     {
@@ -75,7 +75,7 @@ class SalesReceipt extends Item
      *
      * @param int $quantity Item quantity.
      *
-     * @return \ReneDeKat\Quickbooks\Builders\Items\Invoice
+     * @return \ShowHouseSoftware\Quickbooks\Builders\Items\Invoice
      */
     public function setQuantity($quantity)
     {
@@ -87,7 +87,7 @@ class SalesReceipt extends Item
     /**
      * Set this Item as Sales Item.
      *
-     * @return \ReneDeKat\Quickbooks\Builders\Items\Invoice
+     * @return \ShowHouseSoftware\Quickbooks\Builders\Items\Invoice
      */
     public function asSalesItem()
     {
@@ -99,7 +99,7 @@ class SalesReceipt extends Item
     /**
      * Set this Item as Discount.
      *
-     * @return \ReneDeKat\Quickbooks\Builders\Items\Invoice
+     * @return \ShowHouseSoftware\Quickbooks\Builders\Items\Invoice
      */
     public function asDiscount()
     {
@@ -113,7 +113,7 @@ class SalesReceipt extends Item
      *
      * @param float $percent Discount percentage.
      *
-     * @return \ReneDeKat\Quickbooks\Builders\Items\Invoice
+     * @return \ShowHouseSoftware\Quickbooks\Builders\Items\Invoice
      */
     public function setPercent($percent)
     {
@@ -128,7 +128,7 @@ class SalesReceipt extends Item
      *
      * @param float $value Discount value.
      *
-     * @return \ReneDeKat\Quickbooks\Builders\Items\Invoice
+     * @return \ShowHouseSoftware\Quickbooks\Builders\Items\Invoice
      */
     public function setValue($value)
     {
@@ -144,7 +144,7 @@ class SalesReceipt extends Item
      * @param bool  $taxable Set to TRUE to make it taxable or FALSE otherwise. TRUE by default.
      * @param mixed $id      TaxCode ID.
      *
-     * @return \ReneDeKat\Quickbooks\Builders\Items\Invoice
+     * @return \ShowHouseSoftware\Quickbooks\Builders\Items\Invoice
      */
     public function isTaxable($taxable = true, $id = 'TAX')
     {

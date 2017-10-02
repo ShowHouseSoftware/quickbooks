@@ -1,6 +1,6 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Builders;
+namespace ShowHouseSoftware\Quickbooks\Builders;
 
 class QBClass extends Builder
 {

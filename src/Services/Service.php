@@ -1,10 +1,10 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Services;
+namespace ShowHouseSoftware\Quickbooks\Services;
 
-use ReneDeKat\Quickbooks\Builders\Builder;
-use ReneDeKat\Quickbooks\Client;
-use ReneDeKat\Quickbooks\Query;
+use ShowHouseSoftware\Quickbooks\Builders\Builder;
+use ShowHouseSoftware\Quickbooks\Client;
+use ShowHouseSoftware\Quickbooks\Query;
 
 class Service extends Client
 {
@@ -120,7 +120,7 @@ class Service extends Client
      */
     public function getBuilder()
     {
-        $class = '\ReneDeKat\Quickbooks\Builders\\'.$this->getClassName();
+        $class = '\ShowHouseSoftware\Quickbooks\Builders\\'.$this->getClassName();
 
         return new $class($this);
     }

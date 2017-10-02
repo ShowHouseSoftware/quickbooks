@@ -1,11 +1,11 @@
 <?php
 
-namespace ReneDeKat\Quickbooks;
+namespace ShowHouseSoftware\Quickbooks;
 
 use GuzzleHttp\Client as Guzzle;
 use Psr\Http\Message\StreamInterface;
-use ReneDeKat\Quickbooks\Builders\Builder;
-use ReneDeKat\Quickbooks\Builders\Traits\UseMultipart;
+use ShowHouseSoftware\Quickbooks\Builders\Builder;
+use ShowHouseSoftware\Quickbooks\Builders\Traits\UseMultipart;
 
 class Client
 {

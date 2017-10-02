@@ -1,8 +1,8 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Builders\Items;
+namespace ShowHouseSoftware\Quickbooks\Builders\Items;
 
-use ReneDeKat\Quickbooks\Builders\Builder;
+use ShowHouseSoftware\Quickbooks\Builders\Builder;
 
 abstract class Item extends Builder
 {

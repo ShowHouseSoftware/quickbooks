@@ -1,9 +1,9 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Builders;
+namespace ShowHouseSoftware\Quickbooks\Builders;
 
-use ReneDeKat\Quickbooks\Builders\Traits\HasCustomer;
-use ReneDeKat\Quickbooks\Builders\Traits\Itemizable;
+use ShowHouseSoftware\Quickbooks\Builders\Traits\HasCustomer;
+use ShowHouseSoftware\Quickbooks\Builders\Traits\Itemizable;
 
 class Invoice extends Builder
 {

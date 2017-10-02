@@ -1,8 +1,8 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Builders;
+namespace ShowHouseSoftware\Quickbooks\Builders;
 
-use ReneDeKat\Quickbooks\Builders\Traits\UseMultipart;
+use ShowHouseSoftware\Quickbooks\Builders\Traits\UseMultipart;
 
 class Attachable extends Builder
 {

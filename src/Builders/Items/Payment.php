@@ -1,6 +1,6 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Builders\Items;
+namespace ShowHouseSoftware\Quickbooks\Builders\Items;
 
 class Payment extends Item
 {

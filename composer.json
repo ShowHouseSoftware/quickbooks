@@ -1,6 +1,6 @@
 {
-    "name": "renedekat/quickbooks",
-    "homepage": "https://github.com/renedekat/quickbooks",
+    "name": "ShowHouseSoftware/quickbooks",
+    "homepage": "https://github.com/ShowHouseSoftware/quickbooks",
     "description": "Quickbooks' PHP Client",
     "keywords": ["quickbooks", "php"],
     "type": "library",
@@ -13,10 +13,14 @@
         {
             "name": "René de Kat",
             "homepage": "https://github.com/renedekat/quickbooks"
+        },
+        {
+            "name": "RentPro Ltd",
+            "homepage": "https://github.com/ShowHouseSoftware/quickbooks"
         }
     ],
     "support": {
-        "issues": "https://github.com/renedekat/quickbooks"
+        "issues": "https://github.com/ShowHouseSoftware/quickbooks"
     },
     "require": {
         "php": ">=5.5",
@@ -29,12 +33,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ReneDeKat\\Quickbooks\\": "src/"
+            "ShowHouseSoftware\\Quickbooks\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ReneDeKat\\Quickbooks\\Test\\": "tests/"
+            "ShowHouseSoftware\\Quickbooks\\Test\\": "tests/"
         }
     },
     "extra": {

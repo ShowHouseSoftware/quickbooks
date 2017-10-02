@@ -1,6 +1,6 @@
 <?php
 
-namespace ReneDeKat\Quickbooks;
+namespace ShowHouseSoftware\Quickbooks;
 
 use GuzzleHttp\Client as Guzzle;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Builders\Traits;
+namespace ShowHouseSoftware\Quickbooks\Builders\Traits;
 
-use ReneDeKat\Quickbooks\Builders\Items\Item;
+use ShowHouseSoftware\Quickbooks\Builders\Items\Item;
 
 trait Itemizable
 {
@@ -27,7 +27,7 @@ trait Itemizable
      */
     public function getItemBuilder()
     {
-        $class = '\ReneDeKat\Quickbooks\Builders\Items\\'.$this->getEntityName();
+        $class = '\ShowHouseSoftware\Quickbooks\Builders\Items\\'.$this->getEntityName();
 
         return new $class($this);
     }

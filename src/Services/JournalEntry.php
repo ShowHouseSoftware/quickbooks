@@ -1,8 +1,8 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Services;
+namespace ShowHouseSoftware\Quickbooks\Services;
 
-use ReneDeKat\Quickbooks\Services\Traits\Attachable;
+use ShowHouseSoftware\Quickbooks\Services\Traits\Attachable;
 
 class JournalEntry extends Service
 {

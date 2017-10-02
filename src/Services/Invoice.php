@@ -1,10 +1,10 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Services;
+namespace ShowHouseSoftware\Quickbooks\Services;
 
 use Psr\Http\Message\StreamInterface;
-use ReneDeKat\Quickbooks\Services\Traits\Attachable;
-use ReneDeKat\Quickbooks\Services\Traits\Itemizable;
+use ShowHouseSoftware\Quickbooks\Services\Traits\Attachable;
+use ShowHouseSoftware\Quickbooks\Services\Traits\Itemizable;
 
 class Invoice extends Service
 {

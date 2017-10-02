@@ -1,6 +1,6 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Services;
+namespace ShowHouseSoftware\Quickbooks\Services;
 
 class Employee extends Service
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Builders\Items;
+namespace ShowHouseSoftware\Quickbooks\Builders\Items;
 
 class Bill extends Item
 {
@@ -21,7 +21,7 @@ class Bill extends Item
      *
      * @param string $amount Amount.
      *
-     * @return \ReneDeKat\Quickbooks\Builders\Items\Bill
+     * @return \ShowHouseSoftware\Quickbooks\Builders\Items\Bill
      */
     public function setAmount($amount)
     {
@@ -33,7 +33,7 @@ class Bill extends Item
     /**
      * Set this detail as AccountBasedExpenseLineDetail.
      *
-     * @return \ReneDeKat\Quickbooks\Builders\Items\Bill
+     * @return \ShowHouseSoftware\Quickbooks\Builders\Items\Bill
      */
     public function asAccountBasedExpenseLineDetail()
     {
@@ -45,7 +45,7 @@ class Bill extends Item
     /**
      * Set this detail as ItemBasedExpenseLineDetail.
      *
-     * @return \ReneDeKat\Quickbooks\Builders\Items\Bill
+     * @return \ShowHouseSoftware\Quickbooks\Builders\Items\Bill
      */
     public function asItemBasedExpenseLineDetail()
     {
@@ -88,7 +88,7 @@ class Bill extends Item
      * @param bool  $taxable Set to TRUE to make it taxable or FALSE otherwise. TRUE by default.
      * @param mixed $id      TaxCode ID.
      *
-     * @return \ReneDeKat\Quickbooks\Builders\Items\Bill
+     * @return \ShowHouseSoftware\Quickbooks\Builders\Items\Bill
      */
     public function isTaxable($taxable = true, $id = 'TAX')
     {

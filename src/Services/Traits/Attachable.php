@@ -1,8 +1,8 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Services\Traits;
+namespace ShowHouseSoftware\Quickbooks\Services\Traits;
 
-use ReneDeKat\Quickbooks\Services\Attachable as AttachableService;
+use ShowHouseSoftware\Quickbooks\Services\Attachable as AttachableService;
 
 trait Attachable
 {
@@ -22,7 +22,7 @@ trait Attachable
     {
         $service = new AttachableService();
 
-        /** @var \ReneDeKat\Quickbooks\Builders\Attachable $builder */
+        /** @var \ShowHouseSoftware\Quickbooks\Builders\Attachable $builder */
         $builder = $service->getBuilder();
 
         foreach ($files as $file) {

@@ -1,9 +1,9 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Builders;
+namespace ShowHouseSoftware\Quickbooks\Builders;
 
-use ReneDeKat\Quickbooks\Builders\Traits\HasVendor;
-use ReneDeKat\Quickbooks\Builders\Traits\Itemizable;
+use ShowHouseSoftware\Quickbooks\Builders\Traits\HasVendor;
+use ShowHouseSoftware\Quickbooks\Builders\Traits\Itemizable;
 
 class Bill extends Builder
 {

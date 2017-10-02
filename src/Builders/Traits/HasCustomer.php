@@ -1,6 +1,6 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Builders\Traits;
+namespace ShowHouseSoftware\Quickbooks\Builders\Traits;
 
 trait HasCustomer
 {

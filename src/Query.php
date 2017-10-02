@@ -1,13 +1,13 @@
 <?php
 
-namespace ReneDeKat\Quickbooks;
+namespace ShowHouseSoftware\Quickbooks;
 
 class Query
 {
     /**
      * Holds the client or any Services that utilizes it.
      *
-     * @var \ReneDeKat\Quickbooks\Client
+     * @var \ShowHouseSoftware\Quickbooks\Client
      */
     protected $client;
 

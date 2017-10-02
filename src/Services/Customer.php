@@ -1,9 +1,9 @@
 <?php
 
-namespace ReneDeKat\Quickbooks\Services;
+namespace ShowHouseSoftware\Quickbooks\Services;
 
-use ReneDeKat\Quickbooks\Builders\Address;
-use ReneDeKat\Quickbooks\Services\Traits\Attachable;
+use ShowHouseSoftware\Quickbooks\Builders\Address;
+use ShowHouseSoftware\Quickbooks\Services\Traits\Attachable;
 
 class Customer extends Service
 {
@@ -12,7 +12,7 @@ class Customer extends Service
     /**
      * Get an instance of Address Builder to build Address.
      *
-     * @return \ReneDeKat\Quickbooks\Builders\Address
+     * @return \ShowHouseSoftware\Quickbooks\Builders\Address
      */
     public function getAddressBuilder()
     {
