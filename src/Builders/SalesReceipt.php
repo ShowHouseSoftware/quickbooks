@@ -10,15 +10,14 @@ class SalesReceipt extends Builder
     use HasCustomer, Itemizable;
 
     /**
-     * @param array $qboBankAccount
+     * @param int $qboBankAccountId
      *
      * @return $this
      */
-    public function setDepositToAccountRef($qboBankAccount)
+    public function setDepositToAccountRef($qboBankAccountId)
     {
-        $this->data['DepositToAccountRef']['value'] = $qboBankAccount['value'];
-        $this->data['DepositToAccountRef']['name'] = $qboBankAccount['name'];
-
+        $this->data['DepositToAccountRef']['value'] = $qboBankAccountId;
+        
         return $this;   
     }
     
