@@ -54,6 +54,13 @@ class Bill extends Item
         return $this;
     }
 
+    public function setClassRef($id)
+    {
+        $this->data[$this->data['DetailType']]['ClassRef']['value'] = $id;
+
+        return $this;
+    }    
+    
     public function setCustomerRef($id)
     {
         $this->data[$this->data['DetailType']]['CustomerRef']['value'] = $id;
