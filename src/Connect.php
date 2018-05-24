@@ -35,6 +35,13 @@ class Connect extends Client
     const URL_RECONNECT = 'https://appcenter.intuit.com/api/v1/connection/reconnect';
 
     /**
+     * URL to disconnect OAuth (invalidate token).
+     *
+     * * @var string
+     */
+    const URL_DISCONNECT = 'https://appcenter.intuit.com/api/v1/connection/disconnect';
+
+    /**
      * Holds callback URL for redirection when user has authorized.
      *
      * @var string
@@ -114,6 +121,35 @@ class Connect extends Client
             'oauth_token'        => $response['OAuthToken'],
             'oauth_expiry'       => time() + (86400 * 180),
         ];
+    }
+
+    /**
+     * Disconnect from QuickBooks to invalidate existing token.
+     *
+     * @throws \Exception
+     *
+     * @return array
+     */
+    public function disconnect()
+    {
+        $signed = $this->sign('GET', self::URL_DISCONNECT, [
+            'oauth_token' => self::$oauth_token,
+        ]);
+
+        $response = (new Guzzle([
+            'headers' => [
+                'Accept'        => 'application/json',
+                'Content-Type'  => 'application/json',
+                'Authorization' => $signed['header'],
+            ],
+        ]))->request('GET', self::URL_DISCONNECT);
+
+        // retrieve the value
+        $response = json_decode((string) $response->getBody(), true);
+
+        if ($response['ErrorMessage']) {
+            throw new \Exception($response['ErrorMessage'], $response['ErrorCode']);
+        }
     }
 
     /**
