@@ -140,4 +140,16 @@ class Invoice extends Builder
 
         return $this;
     }
+
+    /**
+     * @param string $invoice_number
+     *
+     * @return $this
+     */
+    public function setInvoiceNumber($invoice_number)
+    {
+        $this->data['DocNumber'] = $invoice_number;
+
+        return $this;
+    }
 }
