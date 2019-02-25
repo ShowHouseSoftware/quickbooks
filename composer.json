@@ -1,6 +1,6 @@
 {
-    "name": "ShowHouseSoftware/quickbooks",
-    "homepage": "https://github.com/ShowHouseSoftware/quickbooks",
+    "name": "TiltPropertySoftware/elevate-quickbooks",
+    "homepage": "https://github.com/TiltPropertySoftware/elevate-quickbooks",
     "description": "Quickbooks' PHP Client",
     "keywords": ["quickbooks", "php"],
     "type": "library",
@@ -16,11 +16,11 @@
         },
         {
             "name": "RentPro Ltd",
-            "homepage": "https://github.com/ShowHouseSoftware/quickbooks"
+            "homepage": "https://github.com/TiltPropertySoftware/elevate-quickbooks"
         }
     ],
     "support": {
-        "issues": "https://github.com/ShowHouseSoftware/quickbooks"
+        "issues": "https://github.com/TiltPropertySoftware/elevate-quickbooks"
     },
     "require": {
         "php": ">=5.5",
